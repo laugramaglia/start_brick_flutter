@@ -1,6 +1,6 @@
-import 'package:example/core/utils/extensions/context_extension.dart';
-import 'package:example/core/utils/extensions/string_extension.dart';
 import 'package:flutter/material.dart';
+import 'package:example/core/utils/extensions/string_extension.dart';
+import 'package:example/core/utils/extensions/context_extension.dart';
 import 'package:example/features/account/presentation/ui/pages/account_page.dart';
 
 class HomePage extends StatefulWidget {

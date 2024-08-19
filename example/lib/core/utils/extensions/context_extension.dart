@@ -27,5 +27,6 @@ extension BuildContextExtension on BuildContext {
                 ?.copyWith(color: colorScheme.onError)),
       ));
 
+  // localization
   AppLocalizations get localizations => AppLocalizations.of(this)!;
 }
