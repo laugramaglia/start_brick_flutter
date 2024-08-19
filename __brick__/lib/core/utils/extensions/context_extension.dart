@@ -1,22 +1,26 @@
-import 'package:flutter/material.dart';
-
 extension BuildContextExtension on BuildContext {
+  // Theme
+  ThemeData get theme => Theme.of(this);
+  ColorScheme get colorScheme => theme.colorScheme;
+  TextTheme get textTheme => theme.textTheme;
+
+  // Snackbars
   successSnackBar([String? message]) =>
       ScaffoldMessenger.of(this).showSnackBar(SnackBar(
-        backgroundColor: Theme.of(this).colorScheme.primary,
+        backgroundColor: colorScheme.primary,
         content: Text(message ?? 'Success',
             style: Theme.of(this)
                 .textTheme
                 .bodyMedium
-                ?.copyWith(color: Theme.of(this).colorScheme.onPrimary)),
+                ?.copyWith(color: colorScheme.onPrimary)),
       ));
   errorSnackBar(String message) =>
       ScaffoldMessenger.of(this).showSnackBar(SnackBar(
-        backgroundColor: Theme.of(this).colorScheme.error,
+        backgroundColor: colorScheme.error,
         content: Text(message,
             style: Theme.of(this)
                 .textTheme
                 .bodyMedium
-                ?.copyWith(color: Theme.of(this).colorScheme.onError)),
+                ?.copyWith(color: colorScheme.onError)),
       ));
 }
