@@ -10,7 +10,7 @@ class ColorTheme extends _$ColorTheme {
   @override
   Color build() {
     if (ColorThemeBox.instance.box.values.isEmpty) {
-      return Colors.deepPurple;
+      return Colors.lightBlueAccent;
     }
     ref.keepAlive();
     return ColorThemeBox.instance.box.values.first.toColor();
@@ -23,7 +23,7 @@ class ColorTheme extends _$ColorTheme {
 
   Future<void> removeColor() async {
     await ColorThemeBox.instance.box.deleteAt(0);
-    state = Colors.deepPurple;
+    state = Colors.lightBlueAccent;
   }
 
   // Future<void> clear() async {

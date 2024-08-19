@@ -1,6 +1,9 @@
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:{{project_name.snakeCase()}}/core/theme/theme_hive/color_theme_box.dart';
+import 'package:{{project_name.snakeCase()}}/core/theme/theme_hive/language_box.dart';
 import 'package:{{project_name.snakeCase()}}/core/theme/theme_hive/theme_mode_box.dart';
+import 'package:{{project_name.snakeCase()}}/features/my_home/data/datasource/local/room_box.dart';
+import 'package:{{project_name.snakeCase()}}/features/schedule/data/datasource/local/tasks_box.dart';
 
 class HiveConfig {
   HiveConfig._();
@@ -11,6 +14,7 @@ class HiveConfig {
 
   ColorThemeBox colorThemeBox = ColorThemeBox.instance;
   ThemeModeBox themeModeBox = ThemeModeBox.instance;
+  LanguageBox languageBox = LanguageBox.instance;
 
   Future<void> init() async {
     await Hive.initFlutter();
@@ -22,6 +26,7 @@ class HiveConfig {
       // Theme
       colorThemeBox.init(),
       themeModeBox.init(),
+      languageBox.init(),
     ]);
   }
 
@@ -30,6 +35,7 @@ class HiveConfig {
       // Theme
       colorThemeBox.clear(),
       themeModeBox.clear(),
+      languageBox.clear(),
     ]);
   }
 }

@@ -29,6 +29,11 @@ dependencies:
   dio: ^5.5.0+1
   connectivity_plus: ^2.3.8
 
+# Localization
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
 # Others
   material_floating_search_bar_2: ^0.5.0
   package_info_plus: ^4.2.0

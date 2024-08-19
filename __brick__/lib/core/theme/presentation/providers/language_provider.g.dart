@@ -1,25 +1,25 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'color_theme_provider.dart';
+part of 'language_provider.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$colorThemeHash() => r'8f29e6a3f1fe576d36b2db79997df321edc88582';
+String _$languageHash() => r'f20dd4034f30672166e18c5df1c9f7f72559d371';
 
-/// See also [ColorTheme].
-@ProviderFor(ColorTheme)
-final colorThemeProvider =
-    AutoDisposeNotifierProvider<ColorTheme, Color>.internal(
-  ColorTheme.new,
-  name: r'colorThemeProvider',
+/// See also [Language].
+@ProviderFor(Language)
+final languageProvider =
+    AutoDisposeNotifierProvider<Language, Locale?>.internal(
+  Language.new,
+  name: r'languageProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$colorThemeHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$languageHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$ColorTheme = AutoDisposeNotifier<Color>;
+typedef _$Language = AutoDisposeNotifier<Locale?>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

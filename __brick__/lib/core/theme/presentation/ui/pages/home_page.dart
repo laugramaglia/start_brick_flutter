@@ -9,25 +9,28 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int currentPageIndex = 0;
+  int currentPageIndex = 1;
 
-  final List<
+  List<
       ({
+        GlobalObjectKey key,
         String label,
         IconData iconData,
         Widget page,
-      })> items = [
-    (
-      label: 'Home',
-      iconData: Icons.home_outlined,
-      page: const SizedBox(),
-    ),
-    (
-      iconData: Icons.person_outlined,
-      label: 'Account',
-      page: const AccountPage(),
-    ),
-  ];
+      })> items(BuildContext context) => [
+        (
+          key: const GlobalObjectKey('home'),
+          label: 'home',
+          iconData: Icons.home_outlined,
+          page: const SizedBox(),
+        ),
+        (
+          key: const GlobalObjectKey('account'),
+          iconData: Icons.person_outlined,
+          label: context.localizations.account.capitalize(),
+          page: const AccountPage(),
+        ),
+      ];
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -37,19 +40,25 @@ class _HomePageState extends State<HomePage> {
               currentPageIndex = index;
             });
           },
-          indicatorColor: Theme.of(context).colorScheme.primary,
+          indicatorColor: context.colorScheme.primary,
           selectedIndex: currentPageIndex,
-          destinations: List<NavigationDestination>.from(items.map(
+          destinations: List<NavigationDestination>.from(items(context).map(
             (item) => NavigationDestination(
+              key: item.key,
               icon: Icon(item.iconData,
-                  color: currentPageIndex == items.indexOf(item)
-                      ? Theme.of(context).colorScheme.onPrimary
+                  color: currentPageIndex == items(context).indexOf(item)
+                      ? context.colorScheme.onPrimary
                       : null),
               label: item.label,
             ),
           )),
         ),
-        body:
-            List<Widget>.from(items.map((item) => item.page))[currentPageIndex],
+        body: AnimatedSwitcher(
+            duration: const Duration(milliseconds: 300),
+            child: Material(
+              key: ValueKey(currentPageIndex),
+              child: List<Widget>.from(
+                  items(context).map((item) => item.page))[currentPageIndex],
+            )),
       );
 }

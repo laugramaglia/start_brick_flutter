@@ -1,0 +1,15 @@
+{
+  "languague": "idioma",
+  "languague_current": "español",
+  "@languague_current": {
+    "description": "El idioma actual"
+  },
+      "select_language": "seleccionar idioma",
+  "account": "cuenta",
+  "settings": "configuración",
+  "color_seed": "Color de tema",
+  "color_brightness": "tema",
+  "select_color_theme": "Seleccionar Color del Tema",
+  "cancel": "cancelar",
+
+}
