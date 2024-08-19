@@ -1,7 +1,7 @@
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:{{project_name.snakeCase()}}/core/theme/theme_hive/color_theme_box.dart';
-import 'package:{{project_name.snakeCase()}}/core/theme/theme_hive/language_box.dart';
-import 'package:{{project_name.snakeCase()}}/core/theme/theme_hive/theme_mode_box.dart';
+import 'package:example/core/theme/theme_hive/color_theme_box.dart';
+import 'package:example/core/theme/theme_hive/language_box.dart';
+import 'package:example/core/theme/theme_hive/theme_mode_box.dart';
 
 class HiveConfig {
   HiveConfig._();

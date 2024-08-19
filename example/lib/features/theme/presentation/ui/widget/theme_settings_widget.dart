@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:{{project_name.snakeCase()}}/core/theme/presentation/providers/color_theme_provider.dart';
-import 'package:{{project_name.snakeCase()}}/core/theme/presentation/providers/language_provider.dart';
-import 'package:{{project_name.snakeCase()}}/core/theme/presentation/providers/theme_selector_provider.dart';
-import 'package:{{project_name.snakeCase()}}/core/theme/presentation/ui/widgets/tile_section_widget.dart';
-import 'package:{{project_name.snakeCase()}}/core/utils/extensions/context_extension.dart';
-import 'package:{{project_name.snakeCase()}}/core/utils/extensions/string_extension.dart';
-import 'package:{{project_name.snakeCase()}}/l10n/l10n.dart';
+import 'package:example/core/theme/presentation/providers/color_theme_provider.dart';
+import 'package:example/core/theme/presentation/providers/language_provider.dart';
+import 'package:example/core/theme/presentation/providers/theme_selector_provider.dart';
+import 'package:example/core/theme/presentation/ui/widgets/tile_section_widget.dart';
+import 'package:example/core/utils/extensions/context_extension.dart';
+import 'package:example/core/utils/extensions/string_extension.dart';
+import 'package:example/l10n/l10n.dart';
 
 class ThemeSettingsWidget extends ConsumerWidget {
   const ThemeSettingsWidget({super.key});

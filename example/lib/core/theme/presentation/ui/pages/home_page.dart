@@ -1,7 +1,7 @@
+import 'package:example/core/utils/extensions/context_extension.dart';
+import 'package:example/core/utils/extensions/string_extension.dart';
 import 'package:flutter/material.dart';
-import 'package:{{project_name.snakeCase()}}/core/utils/extensions/string_extension.dart';
-import 'package:{{project_name.snakeCase()}}/core/utils/extensions/context_extension.dart';
-import 'package:{{project_name.snakeCase()}}/features/account/presentation/ui/pages/account_page.dart';
+import 'package:example/features/account/presentation/ui/pages/account_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

@@ -1,0 +1,5 @@
+bricks:
+  start:
+    git:
+      url: "https://github.com/laugramaglia/start_brick_flutter"
+      path: 
