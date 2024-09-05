@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:{{project_name.snakeCase()}}/core/config/local_db/const_type_id.dart';
 import 'package:{{project_name.snakeCase()}}/core/theme/hive_adapters.dart/locale_adapter.dart';
+import 'package:{{project_name.snakeCase()}}/core/theme/theme_hive/hive_adapters.dart/locale_adapter.dart';
+
 
 class LanguageBox {
   // crerate singelton instance
