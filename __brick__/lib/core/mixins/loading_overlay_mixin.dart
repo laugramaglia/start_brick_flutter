@@ -1,5 +1,5 @@
 import 'dart:developer';
-import 'package:example/core/utils/extensions/context_extension.dart';
+import 'package:{{project_name.snakeCase()}}/core/utils/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
 
 mixin LoadingOverlayMixin<T extends StatefulWidget> on State<T> {
