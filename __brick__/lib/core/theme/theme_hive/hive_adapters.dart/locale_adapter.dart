@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:squad_rush/core/config/local_db/const_type_id.dart';
+import 'package:{{project_name.snakeCase()}}/core/config/local_db/const_type_id.dart';
 
 class LocaleAdapter extends TypeAdapter<Locale> {
   @override
